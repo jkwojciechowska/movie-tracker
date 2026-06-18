@@ -1,0 +1,97 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "genre": [
+            "crime fiction"
+        ],
+        "rating": 10.0,
+        "watched": true
+    },
+    {
+        "title": "Interstellar",
+        "year": 2014,
+        "genre": [
+            "sci-fi"
+        ],
+        "rating": 9.0,
+        "watched": true
+    },
+    {
+        "title": "Dune",
+        "year": 2021,
+        "genre": [
+            "sci-fi"
+        ],
+        "rating": null,
+        "watched": false
+    },
+    {
+        "title": "The Batman",
+        "year": 2022,
+        "genre": [
+            "action",
+            "crime fiction"
+        ],
+        "rating": null,
+        "watched": true
+    },
+    {
+        "title": "La La Land",
+        "year": 2016,
+        "genre": [
+            "musical"
+        ],
+        "rating": null,
+        "watched": false
+    },
+    {
+        "title": "Parasite",
+        "year": 2019,
+        "genre": [
+            "comedy",
+            "drama",
+            "thriller"
+        ],
+        "rating": 10.0,
+        "watched": true
+    },
+    {
+        "title": "Wicked",
+        "year": 2024,
+        "genre": [
+            "musical"
+        ],
+        "rating": 4.0,
+        "watched": true
+    },
+    {
+        "title": "The Conjuring",
+        "year": 2013,
+        "genre": [
+            "horror",
+            "mystery"
+        ],
+        "rating": null,
+        "watched": true
+    },
+    {
+        "title": "The Pianist",
+        "year": 2002,
+        "genre": [
+            "war drama"
+        ],
+        "rating": 10.0,
+        "watched": true
+    },
+    {
+        "title": "The Notebook",
+        "year": 2004,
+        "genre": [
+            "romance",
+            "drama"
+        ],
+        "rating": 6.5,
+        "watched": true
+    }
+]
