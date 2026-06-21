@@ -1,6 +1,5 @@
 from movie_manager import MovieManager
-from exceptions import InvalidRatingError, InvalidRegexError, MovieNotFoundError
-
+from exceptions import InvalidRatingError, MovieNotFoundError, InvalidRegexError
 # Displays application menu
 def show_menu():
     print("\n=== Movie Tracker ===")
@@ -181,11 +180,11 @@ def main():
         except InvalidRatingError as error:
             print(f"Rating error: {error}")
 
-        except InvalidRegexError as error:
-            print(f"Regex error: {error}")
-
         except MovieNotFoundError as error:
             print(f"Error: {error}")
+
+        except InvalidRegexError as error:
+            print(f"Regex error: {error}")
 
 if __name__ == "__main__":
     main()

@@ -4,7 +4,7 @@ import re
 import os
 
 from movie import Movie
-from exceptions import InvalidRegexError, MovieNotFoundError
+from exceptions import MovieNotFoundError, InvalidRegexError
 from decorators import log_action
 
 # Class responsible for managing movies and application logic
@@ -95,7 +95,7 @@ class MovieManager:
 
                 print("Invalid choice. Try again.")
 
-        raise MovieNotFoundError("Movie with the given title was not found.")
+        raise MovieNotFoundError(title)
 
     @log_action
     def mark_movie_as_watched(self, title):
@@ -141,14 +141,12 @@ class MovieManager:
         pattern = pattern.strip().strip('"').strip("'")
 
         try:
-            regex = re.compile(pattern, re.IGNORECASE)
+            return [
+                movie for movie in self.movies
+                if re.search(pattern, movie.title, re.IGNORECASE)
+            ]
         except re.error:
-            raise InvalidRegexError("Invalid regular expression.")
-
-        return [
-            movie for movie in self.movies
-            if regex.search(movie.title)
-        ]
+            raise InvalidRegexError(pattern)
 
     # Filters movies by one or multiple genres
     # Supports partial matching and suggestions

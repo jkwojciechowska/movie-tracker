@@ -25,7 +25,7 @@ class Movie:
 
     def set_rating(self, rating):
         if rating < 0 or rating > 10:
-            raise InvalidRatingError("Rating must be between 0 and 10.")
+            raise InvalidRatingError(rating)
         self.rating = rating
 
     # Converts movie object to dictionary for JSON serialization

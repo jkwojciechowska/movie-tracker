@@ -122,33 +122,38 @@ The application validates user input:
 
 The project uses the following Python elements:
 
-* classes
+* classes and objects
+* inheritance
+* custom exceptions with inheritance
+* custom exception constructors (`__init__`)
 * functions
 * lambda expressions
 * custom decorator
-* conditional statements (if)
-* loops (for, while)
+* conditional statements (`if`)
+* loops (`for`, `while`)
 * comparison and logical operators
 * lists
 * dictionaries
 * sets
 * list comprehension
-* generator
-* file handling with 'with' statement
-* JSON serialization
+* set comprehension
+* generator (`yield`)
+* file handling with `with` statement
+* JSON serialization and deserialization
 * regular expressions (regex)
-* error handling with try / except
-* custom exceptions
-* console user interface
+* error handling with `try / except`
+* console user interface (CLI)
 
 ## Custom exceptions
 
-The project contains custom exceptions:
+The project defines a base custom exception and several specialized exceptions:
 
-- InvalidRatingError - raised when the movie rating is outside the allowed range
-- MovieNotFoundError - raised when a movie cannot be found
-- InvalidRegexError - raised when the regular expression is invalid
+- **MovieTrackerError** – base exception for all application-specific errors
+- **InvalidRatingError** – raised when a movie rating is outside the allowed range
+- **MovieNotFoundError** – raised when a movie cannot be found
+- **InvalidRegexError** – raised when an invalid regular expression is provided
 
+Some custom exceptions implement their own constructors (`__init__`) to store additional information about the error and generate detailed error messages.
 ## Author
 
 Julia Wojciechowska
