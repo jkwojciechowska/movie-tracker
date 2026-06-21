@@ -1,5 +1,6 @@
 from movie_manager import MovieManager
 from exceptions import InvalidRatingError, MovieNotFoundError, InvalidRegexError
+
 # Displays application menu
 def show_menu():
     print("\n=== Movie Tracker ===")
